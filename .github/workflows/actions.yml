@@ -1,0 +1,16 @@
+name: Actions Workflow
+# actions permite llamar a otro repositorio y ejecutar acciones 
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Simple JS Actions Workflow"
+        id: greet
+      # los actions se pueden realizar apuntando a un archivo inverno o en otro repositorio
+        uses: actions/hello-world-javascript-action@v1  # user/project@[branh, commit or version] 
+        with:
+          who-to-greet: "Luis Vasquez"
+      - name: Log Geetin Time
+        run: echo {{steps.greet.outputs.time}}
