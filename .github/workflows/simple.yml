@@ -1,6 +1,10 @@
 name: Shell commands
 
 on: [push] 
+
+env:
+  DAY_OF_WEEK: Juanjo
+
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
@@ -17,6 +21,15 @@ jobs:
          import platform
          print(platform.processor())
         shell: python
+      - name: print env variable
+        run: |
+          echo "variable del proceso ----> $DAY_OF_WEEK""
+      - name: print env conditional
+        env:
+          father: luis
+          mother: leidy
+        if: ${{ env.DAY_OF_WEEK == 'Juanjo' }} 
+        run: echo "padre  == $father, mother == $mother "
   run-windows-command:
     runs-on: windows-latest
     needs: ["run-shell-command"] # permite crear dependencias, si no se coloca se ejecutanen paralela
