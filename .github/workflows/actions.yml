@@ -10,6 +10,11 @@ jobs:
         run: |
           pwd
           ls 
+          echo "commit     : $GITHUB_SHA"
+          echo "repository : $GITHUB_REPOSITORY"
+          echo "workspace  : $GITHUB_WORKSPACE"
+
+        # see https://docs.github.com/es/actions/learn-github-actions/environment-variables#default-environment-variables
       - name: Checkout
         uses: actions/checkout@v1
       - name: List Files After checkout
