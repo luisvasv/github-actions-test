@@ -12,6 +12,9 @@ jobs:
           ls 
       - name: Checkout
         uses: actions/checkout@v1
+        run: |
+          pwd
+          ls 
       # por default no clona el repo al contenedor para ejecutar la tarea, debemos especificar que archivos utilizar
       - name: "Simple JS Actions Workflow"
         id: greet
