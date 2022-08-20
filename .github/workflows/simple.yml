@@ -23,7 +23,7 @@ jobs:
         shell: python
       - name: print env variable
         run: |
-          echo "variable del proceso ----> $DAY_OF_WEEK""
+          echo "variable del proceso ----> $DAY_OF_WEEK"
       - name: print env conditional
         env:
           father: luis
