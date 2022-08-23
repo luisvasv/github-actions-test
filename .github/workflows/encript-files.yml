@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Decript file
-        run: gpg --quiet --batch --yes --decrypt --passphrase="{{ secrets.MY_PRHASE_GPG}}" --output $HOME/personal_secret.json personal_secret.json.gpg
+        run: gpg --quiet --batch --yes --decrypt --passphrase="{{ secrets.MY_PRHASE_GPG }}" --output $HOME/personal_secret.json personal_secret.json.gpg
 
       - name: "check file content"
         run: cat $HOME/personal_secret.json
