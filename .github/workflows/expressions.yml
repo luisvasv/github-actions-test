@@ -13,7 +13,7 @@ env:
 on: push
 jobs:
   functions: 
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
       - name: dump
         run: |
@@ -27,7 +27,7 @@ jobs:
           echo $myString
 
   one:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
       - name: Dump GitHub context

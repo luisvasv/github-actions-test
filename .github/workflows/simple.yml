@@ -2,6 +2,8 @@ name: Shell commands
 # event typr https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 on: [push] 
 
+# continue-on-error: true| false | por defecto es false
+# timeout-minutes: 360
 env:
   DAY_OF_WEEK: Juanjo
 
