@@ -1,5 +1,5 @@
 name: Shell commands
-
+# event typr https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 on: [push] 
 
 env:
